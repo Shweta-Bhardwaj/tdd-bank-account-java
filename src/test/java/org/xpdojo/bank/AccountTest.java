@@ -27,10 +27,16 @@ public class AccountTest {
 
 	@Test
 	public void depositingNegativeAmountDoesNotChangeBalance() {
-		Account account = new Account();
+		Account account = createAccount();
 		account.deposit(100);
 		account.deposit(-100);
 		assertEquals(100, account.balance());
 	}
 
+	@Test
+	public void depositingInvalidNumberDoesNotChangeBalance() {
+		Account account = createAccount();
+		account.deposit('a');
+		assertEquals(0, account.balance());
+	}
 }
