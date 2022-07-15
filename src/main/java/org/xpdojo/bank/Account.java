@@ -6,7 +6,7 @@ public class Account {
 		return balance;
 	}
 
-	public void deposit(int amt) {
+	public void deposit(Integer amt) {
 		if (Integer.signum(amt) >= 0) {
 			balance += amt;
 		}

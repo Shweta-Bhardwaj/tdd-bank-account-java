@@ -36,7 +36,7 @@ public class AccountTest {
 	@Test
 	public void depositingInvalidNumberDoesNotChangeBalance() {
 		Account account = createAccount();
-		account.deposit('a');
+	//	account.deposit('a'); // Not allowed since deposit takes Integer as parameter.
 		assertEquals(0, account.balance());
 	}
 }
