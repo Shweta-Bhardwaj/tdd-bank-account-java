@@ -7,6 +7,8 @@ public class Account {
 	}
 
 	public void deposit(int amt) {
-		balance += amt;
+		if (Integer.signum(amt) >= 0) {
+			balance += amt;
+		}
 	}
 }
